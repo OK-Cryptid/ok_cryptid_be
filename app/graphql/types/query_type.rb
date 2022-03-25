@@ -8,10 +8,18 @@ module Types
     # They will be entry points for queries on your schema.
 
     # TODO: remove me
-    field :cryptids, String, null: false,
+    field :cryptids, [CryptidType], null: false,
       description: "All cryptids"
+
     def cryptids
       cryptid = Cryptid.all
+    end
+
+    field :sightings, [SightingType], null: false,
+      description: "All sightings"
+
+    def sightings
+      sighting = Sighting.all
     end
   end
 end

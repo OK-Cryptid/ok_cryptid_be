@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+big_foot = Cryptid.create(name: "Big Foot", range: "range 1", danger_level: "6", image: "Image 1", description: "description 1")
+big_foot_sighting = big_foot.sightings.create(latitude: 1.1, longitude: 2.2, description: "sighting description 1", image: "sighting image 1", title: "title 1 ")
