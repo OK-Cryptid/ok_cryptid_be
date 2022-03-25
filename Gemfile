@@ -29,6 +29,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # gem 'rack-cors'
 gem 'faraday', '>= 1.8.0'
 gem 'jsonapi-serializer'
+gem 'graphql', '1.11.6'
+gem 'graphiql-rails', group: :development
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
