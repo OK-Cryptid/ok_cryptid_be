@@ -10,9 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2022_03_25_192233) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "cryptids", force: :cascade do |t|
+    t.string "name"
+    t.string "range"
+    t.string "danger_level"
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "description"
+  end
+
+  create_table "sightings", force: :cascade do |t|
+    t.bigint "cryptid_id"
+    t.float "latitude"
+    t.float "longitude"
+    t.string "description"
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "title"
+    t.index ["cryptid_id"], name: "index_sightings_on_cryptid_id"
+  end
+
+  add_foreign_key "sightings", "cryptids"
 end
