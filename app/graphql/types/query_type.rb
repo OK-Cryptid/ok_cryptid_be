@@ -8,10 +8,35 @@ module Types
     # They will be entry points for queries on your schema.
 
     # TODO: remove me
-    field :test_field, String, null: false,
-      description: "An example field added by the generator"
-    def test_field
-      "Hello World!"
+
+    field :cryptid_by_id, CryptidType, "get Cryptid by ID" do
+      argument :id, ID
+    end
+
+    def cryptid_by_id(args)
+      Cryptid.find(args[:id])
+    end
+
+    field :cryptid_by_name, CryptidType, "Cryptid by name" do
+      argument :name, String
+    end
+
+    def cryptid_by_name(args)
+      Cryptid.find_by(name: args[:name])
+    end
+
+    field :cryptids, [CryptidType], null: false,
+      description: "All cryptids"
+
+    def cryptids
+      Cryptid.all
+    end
+
+    field :sightings, [SightingType], null: false,
+      description: "All sightings"
+
+    def sightings
+      Sighting.all
     end
   end
 end
