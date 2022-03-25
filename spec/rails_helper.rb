@@ -1,6 +1,6 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
-
+# this is a test 
 require 'simplecov'
 SimpleCov.start
 
