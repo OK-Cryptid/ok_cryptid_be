@@ -234,8 +234,8 @@ DEPENDENCIES
   factory_bot_rails
   faker
   faraday (>= 1.8.0)
-  graphiql-rails
-  graphql
+  graphiql-rails (= 1.7.0)
+  graphql (= 1.9.18)
   jsonapi-serializer
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
