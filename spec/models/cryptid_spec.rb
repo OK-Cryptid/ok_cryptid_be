@@ -11,5 +11,5 @@ RSpec.describe Cryptid, type: :model do
     it { should validate_presence_of(:danger_level) }
     it { should validate_presence_of(:image) }
     it { should validate_presence_of(:description) }
-  end 
+  end
 end
