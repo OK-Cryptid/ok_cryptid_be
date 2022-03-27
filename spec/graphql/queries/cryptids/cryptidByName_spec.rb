@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Types::QueryType do
   describe 'display cryptid searched by name' do
-    it 'can query a single cryptid' do
+    it 'can query a single cryptid by name' do
       create(:cryptid, name: 'Big Foot')
 
       result = OkCryptidBeSchema.execute(cryptid_by_name_query).as_json
