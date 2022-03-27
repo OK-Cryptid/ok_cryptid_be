@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    #this is where FE URL goes. 
+
     origins 'example.com'
 
     resource '*',
