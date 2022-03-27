@@ -32,6 +32,7 @@ gem 'jsonapi-serializer'
 gem 'sass-rails'
 gem 'graphql'
 gem 'graphiql-rails', '1.7.0'
+gem 'rack-cors'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
