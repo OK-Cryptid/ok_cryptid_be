@@ -5,5 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-big_foot = Cryptid.create(name: "Big Foot", range: "range 1", danger_level: "6", image: "Image 1", description: "description 1")
+big_foot = Cryptid.create(name: "Big Foot",
+                          range: "Rocky Mountains, Appalachian Trial, Coastal Plain",
+                          danger_level: "6",
+                          image: "https://m.media-amazon.com/images/M/MV5BZTdlMzI2MGYtMTZkNi00OWUyLTk2YWEtNTdmYzRiNjlhM2QyXkEyXkFqcGdeQXVyMjU0MzA2NjM@._V1_.jpg",
+                          description: "Sasquatch, also called Bigfoot, (from Salish se’sxac: “wild men”) a large, hairy, humanlike creature believed by some people to exist in the northwestern United States and western Canada. It seems to represent the North American counterpart of the Himalayan region’s mythical monster, the Abominable Snowman, or Yeti.")
 big_foot_sighting = big_foot.sightings.create(latitude: 1.1, longitude: 2.2, description: "sighting description 1", image: "sighting image 1", title: "title 1 ")
