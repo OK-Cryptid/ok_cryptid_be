@@ -34,6 +34,7 @@ gem 'graphql'
 gem 'graphiql-rails', '1.7.0'
 gem 'rack-cors'
 gem 'factory_bot_rails'
+gem 'faker'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -54,7 +55,6 @@ end
 group  :test do
   gem 'pry'
   gem 'simplecov'
-  gem 'faker'
   gem 'shoulda-matchers'
   gem 'rubocop', '~> 1.25', require: false
   gem 'rubocop-rails', require: false
