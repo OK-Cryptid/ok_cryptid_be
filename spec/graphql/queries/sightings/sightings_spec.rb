@@ -7,7 +7,7 @@ RSpec.describe Types::QueryType do
       big_sighting = create(:sighting, cryptid: big_foot, title: "Here")
       big_sighting_2 = create(:sighting, cryptid: big_foot, title: "There")
 
-      result = OkCryptidBeSchema.execute(query).as_json
+      result = OkCryptidBeSchema.execute(sighting_query).as_json
       expect(result['data']['sightings'].count).to eq(2)
       expect(result['data']['sightings'].first['cryptidId']).to eq(big_foot.id)
       expect(result['data']['sightings'].first['title']).to be_a(String)
@@ -20,7 +20,7 @@ RSpec.describe Types::QueryType do
     end
   end
 
-def query
+def sighting_query
   <<~GQL
     {
       sightings {
