@@ -1,9 +1,10 @@
+require 'faker'
+
 FactoryBot.define do
   factory :sighting do
-    cyrptid { nil }
-    latitude { 1.5 }
-    longitude { 1.5 }
-    description { "MyString" }
-    image { "MyString" }
+    association :cryptid, factory: :cryptid
+    location { Faker::Address.state }
+    description { Faker::Lorem.sentence(word_count: 5) }
+    image { Faker::LoremFlickr.image(seach_terms: ['cryptid']) }
   end
 end
