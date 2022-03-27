@@ -25,10 +25,10 @@ module Types
       Cryptid.find_by(name: args[:name])
     end
 
-    field :cryptids, [CryptidType], null: false,
+    field :get_cryptids, [CryptidType], null: false,
       description: "All cryptids"
 
-    def cryptids
+    def get_cryptids
       Cryptid.all
     end
 
