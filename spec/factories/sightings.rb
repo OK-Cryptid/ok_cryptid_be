@@ -6,6 +6,6 @@ FactoryBot.define do
     title { Faker::Games::HalfLife.location }
     location { Faker::Address.state }
     description { Faker::Lorem.sentence(word_count: 5) }
-    image { Faker::LoremFlickr.image(seach_terms: ['cryptid']) }
+    image { Faker::LoremFlickr.image(search_terms: ['cryptid']) }
   end
 end
