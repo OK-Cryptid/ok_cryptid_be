@@ -7,5 +7,6 @@ FactoryBot.define do
     location { Faker::Address.state }
     description { Faker::Lorem.sentence(word_count: 5) }
     image { Faker::LoremFlickr.image(search_terms: ['cryptid']) }
+    trail_links { [Faker::Internet.domain_name, Faker::Internet.domain_name, Faker::Internet.domain_name]}
   end
 end
