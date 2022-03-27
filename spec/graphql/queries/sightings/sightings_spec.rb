@@ -15,8 +15,7 @@ RSpec.describe Types::QueryType do
       expect(result['data']['sightings'].first['location']).to be_a(String)
       # expect(result['data']['sightings'].first['trail_links']).to be_a(String)
       expect(result['data']['sightings'].first['image']).to be_a(String)
-      end
-
+    end
   end
 end
 
