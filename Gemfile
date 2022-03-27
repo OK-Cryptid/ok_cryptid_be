@@ -33,13 +33,13 @@ gem 'sass-rails'
 gem 'graphql'
 gem 'graphiql-rails', '1.7.0'
 gem 'rack-cors'
+gem 'factory_bot_rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
   gem 'rspec_junit_formatter'
-  gem 'factory_bot_rails'
   gem 'graphql'
 end
 
