@@ -11,8 +11,6 @@ RSpec.describe Types::QueryType do
       expect(result['data']['getCryptids'].first['name']).to eq('Big Foot')
 
       cryptids = Cryptid.all
-      require 'pry'
-      binding.pry
       expect(result.dig('data', 'getCryptids')).to match_array(
         cryptids.map do |cryptid|
           {
