@@ -7,7 +7,7 @@ module Types
     field :location, String
     field :description, String
     field :image, String
-    field :trail_link, Array
+    field :trail_links, [String]
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
     field :title, String
