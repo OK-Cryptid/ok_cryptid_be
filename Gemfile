@@ -39,7 +39,6 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
   gem 'rspec_junit_formatter'
-  gem 'graphql'
 end
 
 group :development do

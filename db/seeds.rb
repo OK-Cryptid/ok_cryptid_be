@@ -12,4 +12,4 @@ big_foot = Cryptid.create(name: "Big Foot",
                           description: "Sasquatch, also called Bigfoot, (from Salish se’sxac: “wild men”) a large, hairy, humanlike creature believed by some people to exist in the northwestern United States and western Canada. It seems to represent the North American counterpart of the Himalayan region’s mythical monster, the Abominable Snowman, or Yeti.")
 
 big_foot_sighting = big_foot.sightings.create(location: 'Millstone, PE',
-                                              description: "Spotted Bigfoot along the highway near millstone. Described the creature as having looked back at them on the shoulder of the road — an encounter that ultimately lasted seconds", image: "sighting image 1", title: "title 1 ")
+                                              description: "Spotted Bigfoot along the highway near millstone. Described the creature as having looked back at them on the shoulder of the road — an encounter that ultimately lasted seconds", image: "sighting image 1", title: "title 1 ", trail_links: ["thisway.com", "bigfootspotted.com"])
