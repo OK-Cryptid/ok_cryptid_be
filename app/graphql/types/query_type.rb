@@ -4,11 +4,16 @@ module Types
     include GraphQL::Types::Relay::HasNodeField
     include GraphQL::Types::Relay::HasNodesField
 
+    # field :cryptid_by_id, resolver: Queries::CryptidById
+    # field :cryptid_by_name, resolver: Queries::CryptidByName
+    # field :cryptid_by_range, resolver: Queries::CryptidByRange
+    field :get_cryptids, resolver: Queries::GetCryptids
+
     # Add root-level fields here.
     # They will be entry points for queries on your schema.
 
     # TODO: remove me
-
+    #
     field :cryptid_by_id, CryptidType, "get Cryptid by ID" do
       argument :id, ID
     end
@@ -25,12 +30,6 @@ module Types
       Cryptid.find_by(name: args[:name])
     end
 
-    field :get_cryptids, [CryptidType], null: false,
-      description: "All cryptids"
-
-    def get_cryptids
-      Cryptid.all
-    end
 
     field :sightings, [SightingType], null: false,
       description: "All sightings"
