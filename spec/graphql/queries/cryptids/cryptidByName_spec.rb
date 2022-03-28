@@ -7,11 +7,13 @@ RSpec.describe Types::QueryType do
 
       result = OkCryptidBeSchema.execute(cryptid_by_name_query).as_json
       expect(result['data']['cryptidByName']['name']).to eq("Bigfoot")
+
       expect(result['data']['cryptidByName']["description"]).to be_a String
       expect(result['data']['cryptidByName']['dangerLevel']).to be_a String
       expect(result['data']['cryptidByName']['range']).to be_a String
       expect(result['data']['cryptidByName']['image']).to be_a String
     end
+
 
     it 'returns an error if no cryptid by name' do
       create(:cryptid, name: 'asdawdt')
@@ -42,6 +44,7 @@ def cryptid_by_name_query
     }
   GQL
 end
+
 def cryptid_by_name_query_blank_name
   <<~GQL
     {

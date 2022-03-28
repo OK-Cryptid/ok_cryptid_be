@@ -57,3 +57,4 @@ def cryptid_by_id_query_id_blank
     }
   GQL
 end
+
