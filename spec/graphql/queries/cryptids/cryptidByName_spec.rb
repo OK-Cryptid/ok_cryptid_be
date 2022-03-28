@@ -6,8 +6,8 @@ RSpec.describe Types::QueryType do
       create(:cryptid, name: 'Big Foot')
 
       result = OkCryptidBeSchema.execute(cryptid_by_name_query).as_json
-      expect(result['data']['cryptidByName']['name']).to eq("Big Foot")
-      expect(result['data']['cryptidByName']["description"]).to be_a String
+      expect(result['data']['cryptidByName']['name']).to eq('Big Foot')
+      expect(result['data']['cryptidByName']['description']).to be_a String
       expect(result['data']['cryptidByName']['dangerLevel']).to be_a String
       expect(result['data']['cryptidByName']['range']).to be_a String
       expect(result['data']['cryptidByName']['image']).to be_a String
