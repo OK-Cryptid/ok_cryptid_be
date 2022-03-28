@@ -22,7 +22,7 @@ module Types
     end
 
     def cryptid_by_name(args)
-      Cryptid.find_by(name: args[:name])
+      Cryptid.search(args[:name])
     end
 
     field :get_cryptids, [CryptidType], null: false,
