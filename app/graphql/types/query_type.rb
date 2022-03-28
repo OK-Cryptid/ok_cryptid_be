@@ -15,5 +15,13 @@ module Types
     def sightings
       Sighting.all
     end
+
+    field :sighting_by_id, SightingType, "get Sighting by ID" do
+      argument :id, ID
+    end
+
+    def sighting_by_id(args)
+      Sighting.find(args[:id])
+    end
   end
 end
