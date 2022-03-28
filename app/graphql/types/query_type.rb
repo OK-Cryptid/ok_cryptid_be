@@ -14,7 +14,7 @@ module Types
     end
 
     def cryptid_by_id(args)
-      Cryptid.find(args[:id])
+      Cryptid.find_by(id: args[:id])
     end
 
     field :cryptid_by_name, CryptidType, "Cryptid by name" do
