@@ -2,8 +2,8 @@ require 'rails_helper'
 
 module Queries
   RSpec.describe CryptidById, type: :request do
-      describe '.resolve' do
-        it 'returns a cryptid by id' do
+    describe '.resolve' do
+      it 'returns a cryptid by id' do
         cryptid = create(:cryptid, id: '1')
 
         result = OkCryptidBeSchema.execute(cryptid_by_id_query).as_json
