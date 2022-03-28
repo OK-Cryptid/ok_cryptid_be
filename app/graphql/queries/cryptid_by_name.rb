@@ -7,7 +7,7 @@ module Queries
     type Types::CryptidType, null: false
 
     def resolve(args)
-      Cryptid.find_by(name: args[:name])
+      Cryptid.search(args[:name]).first
     end
   end
 end
