@@ -7,7 +7,7 @@ module Types
     field :cryptid_by_id, resolver: Queries::CryptidById
     field :cryptid_by_name, resolver: Queries::CryptidByName
     field :get_cryptids, resolver: Queries::GetCryptids
-    # field :cryptid_by_range, resolver: Queries::CryptidByRange
+    field :cryptid_by_range, resolver: Queries::CryptidByRange
 
     field :sightings, [SightingType], null: false,
       description: "All sightings"
