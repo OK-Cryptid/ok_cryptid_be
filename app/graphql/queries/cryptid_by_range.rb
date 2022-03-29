@@ -4,10 +4,11 @@ module Queries
 
     argument :range, String
 
-    type Types::CryptidType, null: false
+    type [Types::CryptidType], null: false
 
     def resolve(args)
-      Cryptid.search_range(args[:range]).first
+      Cryptid.search_range(args[:range])
+
     end
   end
 end
