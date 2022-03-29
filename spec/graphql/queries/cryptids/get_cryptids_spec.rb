@@ -7,11 +7,12 @@ RSpec.describe Types::QueryType do
       create_list(:cryptid, 4)
 
       result = OkCryptidBeSchema.execute(query).as_json
-      expect(result['data']['getCryptids'].count).to eq(5)
-      expect(result['data']['getCryptids'].first['name']).to eq('Big Foot')
+
+      expect(result['data']['cryptids'].count).to eq(5)
+      expect(result['data']['cryptids'].first['name']).to eq('Big Foot')
 
       cryptids = Cryptid.all
-      expect(result.dig('data', 'getCryptids')).to match_array(
+      expect(result.dig('data', 'cryptids')).to match_array(
         cryptids.map do |cryptid|
           {
             'name' => cryptid.name,
@@ -29,7 +30,7 @@ end
 def query
   <<~GQL
     {
-      getCryptids {
+     cryptids {
         name
         description
         dangerLevel
