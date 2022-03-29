@@ -9,4 +9,12 @@ class Cryptid < ApplicationRecord
       where("name ILIKE ?", "%#{search_params}%")
     end
   end
+
+  def self.search_range(search_params)
+    if search_params.blank?
+      []
+    else
+      where("range ILIKE ?", "%#{search_params}%")
+    end
+  end
 end

@@ -22,7 +22,7 @@ module Queries
       end
 
       it 'returns an error if cryptid name is left blank' do
-        create(:cryptid, name: 'asdawdt')
+        cryptid = create(:cryptid, name: 'asdawdt')
 
         result = OkCryptidBeSchema.execute(cryptid_by_name_query_blank_name).as_json
         expect(result).to have_key("errors")
