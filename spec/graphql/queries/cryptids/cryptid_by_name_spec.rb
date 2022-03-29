@@ -25,7 +25,7 @@ module Queries
         cryptid = create(:cryptid, name: 'asdawdt')
 
         result = OkCryptidBeSchema.execute(cryptid_by_name_query_blank_name).as_json
-        expect(result).to have_key("errors")
+        expect(result['data']['cryptidByName']).to eq([])
       end
     end
   end

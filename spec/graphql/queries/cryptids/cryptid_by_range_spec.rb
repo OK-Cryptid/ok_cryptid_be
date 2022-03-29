@@ -25,7 +25,7 @@ module Queries
         create(:cryptid, range: 'Colorado')
 
         result = OkCryptidBeSchema.execute(cryptid_by_range_query_blank_name).as_json
-        expect(result).to have_key("errors")
+        expect(result['data']['cryptidByRange']).to eq([])
       end
     end
   end
