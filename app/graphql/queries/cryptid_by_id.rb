@@ -6,8 +6,8 @@ module Queries
 
     type Types::CryptidType, null: false
 
-    def resolve(id:)
-      ::Cryptid.find(id)
+    def resolve(args)
+      Cryptid.find_by(id: args[:id])
     end
   end
 end
