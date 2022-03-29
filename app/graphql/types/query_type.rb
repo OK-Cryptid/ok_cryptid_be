@@ -9,19 +9,8 @@ module Types
     field :get_cryptids, resolver: Queries::GetCryptids
     # field :cryptid_by_range, resolver: Queries::CryptidByRange
 
-    field :sightings, [SightingType], null: false,
-      description: "All sightings"
-
-    def sightings
-      Sighting.all
-    end
-
-    field :sighting_by_id, SightingType, "get Sighting by ID" do
-      argument :id, ID
-    end
-
-    def sighting_by_id(args)
-      Sighting.find(args[:id])
-    end
+    field :sightings, resolver: Queries::Sightings
+    field :sighting_by_id, resolver: Queries::SightingById
+    field :sighting_by_location, resolver: Queries::SightingByLocation
   end
 end
