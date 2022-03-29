@@ -99,9 +99,9 @@ alien_sighting_2 = create(:sighting, cryptid: alien, description: 'A family of s
 alien_sighting_3 = create(:sighting, cryptid: alien, description: 'A woman with a sick elderly dog was sitting on the floor comforting her pet. She heard a strange sound and a small humanoid creature with large eyes appeared beside her. The creature reached out and rested its hand on the dog. The womans husband entered the room, and jumped back, not knowing what the creature was. It was startled and darted outside through the dog door.')
 
 # nessie
-nessie_sighting_1 = create(:sighting, cryptid: nessie, description: 'A group of friends vacationing on a boat reported seeing a huge creature with a long neck arch out of the water.')
-nessie_sighting_2 = create(:sighting, cryptid: nessie, description: 'Police received multiple calls of a strange extremely large creature swimming at high speed and emitting a low freqency noise.')
-nessie_sighting_3 = create(:sighting, cryptid: nessie, description: 'A group of college students playing with a drone recorded a massive unknown creature swimming in the loch.')
+nessie_sighting_1 = create(:sighting, cryptid: nessie, description: 'A group of friends vacationing on a boat reported seeing a huge creature with a long neck arch out of the water.', image: "https://bit.ly/3LHn4z1" , trail_links: ["https://bit.ly/3uAeStq", "https://bit.ly/36wsYnH"])
+nessie_sighting_2 = create(:sighting, cryptid: nessie, description: 'Police received multiple calls of a strange extremely large creature swimming at high speed and emitting a low freqency noise.', image: "https://bit.ly/3JPCeBn", trail_links: ["https://bit.ly/3JR7FeV", "https://bit.ly/3tN9ST0", "https://bit.ly/3DmtS1S"])
+nessie_sighting_3 = create(:sighting, cryptid: nessie, description: 'A group of college students playing with a drone recorded a massive unknown creature swimming in the loch.', image: "https://bit.ly/3DnIgXR", trail_links: ["https://bit.ly/3iOkGd2"])
 
 #jackalope
 jackalope_sighting_1 = create(:sighting, cryptid: jackalope, description: 'A child hiking with their parents spotted a strange looking rabbit in the distance', image: "https://bit.ly/3ITCw98", trail_links: ["https://bit.ly/3iJi00o", "https://bit.ly/3IJTmrb", "https://bit.ly/3Lsloca"])
