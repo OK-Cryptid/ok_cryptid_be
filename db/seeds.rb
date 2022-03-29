@@ -94,7 +94,6 @@ swalker_sighting_3 = create(:sighting, cryptid: skinwalker, description: 'A fath
 
 # alien
 alien_sighting_1 = create(:sighting, cryptid: alien, description: 'A man was awoken during the night to an extremely bright light shining in through his bedroom window. He decided to get out of bed to see where the light was coming from outside. He was startled to find a figure standing in his room between himself and his window. He was unable to move or scream, and the figure approached him. It reached out and began tapping on his forehead with what felt like something sharp or pointed. He blacked out and woke up on the floor the next morning. He was found to have a small unexplained red spot of broken skin in the center of his forehead.')
->>>>>>> e6c35135f272eb6cf7702d3b5649d7c62911abb6
 alien_sighting_2 = create(:sighting, cryptid: alien, description: 'A family of six was sitting around a campfire in their back yard late at night. They reported that suddenly a blinding blue light appeared above them. The next thing they remember, they were all standing inside their house facing the back door.')
 alien_sighting_3 = create(:sighting, cryptid: alien, description: 'A woman with a sick elderly dog was sitting on the floor comforting her pet. She heard a strange sound and a small humanoid creature with large eyes appeared beside her. The creature reached out and rested its hand on the dog. The womans husband entered the room, and jumped back, not knowing what the creature was. It was startled and darted outside through the dog door.')
 
