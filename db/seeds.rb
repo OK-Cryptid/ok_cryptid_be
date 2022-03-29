@@ -22,6 +22,7 @@ tommyknocker = create(:cryptid, name: "Tommyknocker", range: "underground Pennsy
 skinwalker = create(:cryptid, name: "Skin-walker", range: "unknown", image: "https://bit.ly/3uzpUPx", description: "A skin-walker is a type of harmful witch who has the ability to turn into, possess, or disguise themselves as an animal for the purpose of committing harm. Skin-walkers are not well understood outside of Navajo culture, mostly due to reluctance to discuss the subject with outsiders.")
 alien = create(:cryptid, name: "Alien", range: "unknown", image: "https://bit.ly/3tHKvBO", description: "Also called extraterrestrial life, aliens are intelligent beings that do not originate from earth.")
 nessie = create(:cryptid, name: "Loch Ness Monster", range: "Scottish Highlands", image: "https://bit.ly/3Nons6V", description: "A creature affectionately known as Nessie, it is a large, long-necked creature that inhabits Loch Ness in the Scottish Highlands.")
+jackalope = create(:cryptid, name: "Jackalope", range: "Western United States", image: "https://bit.ly/3ITqGvI", description: "A jackrabbit and antelope hybrid. Though very shy unless approached, this creature is known to be aggressive. Also called the 'warrior rabbit'. However this beast can be tamed with the offering of fine whiskey.")
 
 # sightings
 
@@ -101,3 +102,8 @@ alien_sighting_3 = create(:sighting, cryptid: alien, description: 'A woman with 
 nessie_sighting_1 = create(:sighting, cryptid: nessie, description: 'A group of friends vacationing on a boat reported seeing a huge creature with a long neck arch out of the water.')
 nessie_sighting_2 = create(:sighting, cryptid: nessie, description: 'Police received multiple calls of a strange extremely large creature swimming at high speed and emitting a low freqency noise.')
 nessie_sighting_3 = create(:sighting, cryptid: nessie, description: 'A group of college students playing with a drone recorded a massive unknown creature swimming in the loch.')
+
+#jackalope
+jackalope_sighting_1 = create(:sighting, cryptid: jackalope, description: 'A child hiking with their parents spotted a strange looking rabbit in the distance', trail_links: ["https://bit.ly/3iJi00o", "https://bit.ly/3IJTmrb", "https://bit.ly/3Lsloca"])
+jackalope_sighting_2 = create(:sighting, cryptid: jackalope, description: 'Two sheep ranchers saw something that looked like a tinhy antelope approach their fire at dusk.', trail_links: ["https://www.alltrails.com/explore/trail/us/kansas/mount-sunflower-trail-kansas-highpoint"])
+jackalope_sighting_3 = create(:sighting, cryptid: jackalope, description: 'A group of students on an astronomy field trip saw a pair of glowing eyes in the darkness. When they pointed a flashlight at it they could see a small creature dart into tall grass.', trail_links: ["https://bit.ly/3iNJTnX", "https://bit.ly/38bVMCi", "https://bit.ly/3IP0B14"])
