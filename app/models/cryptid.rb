@@ -12,7 +12,7 @@ class Cryptid < ApplicationRecord
 
   def self.search_range(search_params)
     if search_params.blank?
-      []
+      [Cryptid.find_by(name: "#{search_params}")]
     else
       where("range ILIKE ?", "%#{search_params}%")
     end
