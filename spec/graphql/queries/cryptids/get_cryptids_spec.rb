@@ -4,10 +4,11 @@ module Queries
   RSpec.describe GetCryptids, type: :request do
     describe '.resolve' do
       it 'returns all cryptids' do
-        cryptid = create(:cryptid, name: "Jackalope")
+        cryptid = create(:cryptid, name: 'Jackalope')
         create_list(:cryptid, 4)
 
         result = OkCryptidBeSchema.execute(query).as_json
+
         expect(result['data']['getCryptids'].count).to eq(5)
         expect(result['data']['getCryptids'].first['name']).to eq('Jackalope')
 
@@ -31,7 +32,7 @@ end
 def query
   <<~GQL
     {
-      getCryptids {
+     getCryptids {
         name
         description
         dangerLevel
