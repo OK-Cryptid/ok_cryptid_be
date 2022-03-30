@@ -111,7 +111,6 @@ Implicit
 ### Important Gems
 
 - Testing: [rspec-rails](https://github.com/rspec/rspec-rails), [simplecov](https://github.com/simplecov-ruby/simplecov), [factory_bot_rails](https://github.com/thoughtbot/factory_bot_rails), [faker](https://github.com/vajradog/faker-rails)
-- 
 - GraphQL: graphql and graphiql-rails (no specific sites, independent research needed) 
 
 ----------
@@ -785,13 +784,13 @@ response
 <table>
   <tr>
     <!-- Darren -->
-    <td align="center"><a href="https://github.com/dkulback"><img src="https://avatars.githubusercontent.com/u/83717116?v=4" width="100px;" alt=""/><br /><sub><b>Darren (he/him)</b></sub></a><br /><a href="https://www.linkedin.com/in/darren-kulback-9b2394189/" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/dkulback"><img src="https://avatars.githubusercontent.com/u/83717116?v=4" width="100px;" alt=""/><br /><sub><b>Darren (he/him)</b></sub></a><br /><a href="https://www.linkedin.com/in/darren-kulback-9b2394189/" title="Code"> LinkedIn </a></td>
     <!-- Eric -->
-    <td align="center"><a href="https://github.com/echon006"><img src="https://avatars.githubusercontent.com/u/89038271?v=4" width="100px;" alt=""/><br /><sub><b>Eric (he/him)</b></sub></a><br /><a href="https://www.linkedin.com/in/eric-chon-70049b161/" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/echon006"><img src="https://avatars.githubusercontent.com/u/89038271?v=4" width="100px;" alt=""/><br /><sub><b>Eric (he/him)</b></sub></a><br /><a href="https://www.linkedin.com/in/eric-chon-70049b161/" title="Code">  LinkedIn  </a></td>
     <!-- Mallory -->
-    <td align="center"><a href="https://github.com/Malllll12"><img src="https://avatars.githubusercontent.com/u/69017022?v=4" width="100px;" alt=""/><br /><sub><b>Mallory (she/her)</b></sub></a><br /><a href="https://www.linkedin.com/in/mallory-vining/" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/Malllll12"><img src="https://avatars.githubusercontent.com/u/69017022?v=4" width="100px;" alt=""/><br /><sub><b>Mallory (she/her)</b></sub></a><br /><a href="https://www.linkedin.com/in/mallory-vining/" title="Code"> LinkedIn </a></td>
     <!-- Parker -->
-     <td align="center"><a href="https://github.com/ParkerLockhart"><img src="https://avatars.githubusercontent.com/u/88950699?v=4" width="100px;" alt=""/><br /><sub><b>Parker (they/them)</b></sub></a><br /><a href="https://www.linkedin.com/in/parker-lockhart/" title="Code">💻</a></td>
+     <td align="center"><a href="https://github.com/ParkerLockhart"><img src="https://avatars.githubusercontent.com/u/88950699?v=4" width="100px;" alt=""/><br /><sub><b>Parker (they/them)</b></sub></a><br /><a href="https://www.linkedin.com/in/parker-lockhart/" title="Code"> LinkedIn </a></td>
   </tr>
 </table>
 
