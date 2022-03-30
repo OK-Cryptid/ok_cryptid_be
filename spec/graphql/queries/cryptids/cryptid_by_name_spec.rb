@@ -34,7 +34,7 @@ end
 def cryptid_by_name_query
   <<~GQL
     {
-      cryptidByName(name: 'Big Foot') {
+      cryptidByName(name: "Big Foot") {
         name
         description
         dangerLevel
@@ -48,7 +48,7 @@ end
 def cryptid_by_name_query_blank_name
   <<~GQL
     {
-      cryptidByName(name: '') {
+      cryptidByName(name: "") {
         name
         description
         dangerLevel
