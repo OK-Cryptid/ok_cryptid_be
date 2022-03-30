@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Cryptid, type: :model do
+RSpec.describe Cryptid do
   describe 'relationships' do
     it { should have_many :sightings }
   end
@@ -26,7 +26,7 @@ RSpec.describe Cryptid, type: :model do
       result = Cryptid.search_name('hello')
       expect(result).to eq([])
     end
-    
+
     it 'returns empty array if keyword is blank' do
       create(:cryptid, name: 'big')
       result = Cryptid.search_name('')
