@@ -4,7 +4,7 @@ module Queries
   RSpec.describe GetCryptids, type: :request do
     describe '.resolve' do
       it 'returns all cryptids' do
-        cryptid = create(:cryptid, name: 'Jackalope')
+        create(:cryptid, name: 'Jackalope')
         create_list(:cryptid, 4)
 
         result = OkCryptidBeSchema.execute(query).as_json
@@ -12,9 +12,9 @@ module Queries
         expect(result['data']['getCryptids'].count).to eq(5)
         expect(result['data']['getCryptids'].first['name']).to eq('Jackalope')
 
-        cryptids = Cryptid.all
+        all_cryptids = Cryptid.all
         expect(result.dig('data', 'getCryptids')).to match_array(
-          cryptids.map do |cryptid|
+          all_cryptids.map do |cryptid|
             {
               'name' => cryptid.name,
               'description' => cryptid.description,

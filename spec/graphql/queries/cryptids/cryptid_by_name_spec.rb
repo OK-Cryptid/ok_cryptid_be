@@ -7,8 +7,8 @@ module Queries
         create(:cryptid, name: 'Big Foot')
 
         result = OkCryptidBeSchema.execute(cryptid_by_name_query).as_json
-        expect(result['data']['cryptidByName']['name']).to eq("Big Foot")
-        expect(result['data']['cryptidByName']["description"]).to be_a String
+        expect(result['data']['cryptidByName']['name']).to eq('Big Foot')
+        expect(result['data']['cryptidByName']['description']).to be_a String
         expect(result['data']['cryptidByName']['dangerLevel']).to be_a String
         expect(result['data']['cryptidByName']['range']).to be_a String
         expect(result['data']['cryptidByName']['image']).to be_a String
@@ -18,14 +18,14 @@ module Queries
         create(:cryptid, name: 'asdawdt')
 
         result = OkCryptidBeSchema.execute(cryptid_by_name_query).as_json
-        expect(result).to have_key("errors")
+        expect(result).to have_key('errors')
       end
 
       it 'returns an error if cryptid name is left blank' do
         create(:cryptid, name: 'asdawdt')
 
         result = OkCryptidBeSchema.execute(cryptid_by_name_query_blank_name).as_json
-        expect(result).to have_key("errors")
+        expect(result).to have_key('errors')
       end
     end
   end

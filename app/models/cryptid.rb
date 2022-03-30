@@ -6,7 +6,7 @@ class Cryptid < ApplicationRecord
     if search_params.blank?
       []
     else
-      where("name ILIKE ?", "%#{search_params}%")
+      where('name ILIKE ?', "%#{search_params}%")
     end
   end
 end
