@@ -7,25 +7,25 @@ module Queries
         create(:cryptid, name: 'Big Foot')
 
         result = OkCryptidBeSchema.execute(cryptid_by_name_query).as_json
-        expect(result['data']['cryptidByName']['name']).to eq("Big Foot")
-        expect(result['data']['cryptidByName']["description"]).to be_a String
-        expect(result['data']['cryptidByName']['dangerLevel']).to be_a String
-        expect(result['data']['cryptidByName']['range']).to be_a String
-        expect(result['data']['cryptidByName']['image']).to be_a String
+        expect(result['data']['cryptidByName'].first['name']).to eq("Big Foot")
+        expect(result['data']['cryptidByName'].first["description"]).to be_a String
+        expect(result['data']['cryptidByName'].first['dangerLevel']).to be_a String
+        expect(result['data']['cryptidByName'].first['range']).to be_a String
+        expect(result['data']['cryptidByName'].first['image']).to be_a String
       end
 
       it 'returns an error if no cryptid by name' do
         create(:cryptid, name: 'asdawdt')
 
         result = OkCryptidBeSchema.execute(cryptid_by_name_query).as_json
-        expect(result).to have_key("errors")
+        expect(result['data']['cryptidByName']).to eq([])
       end
 
       it 'returns an error if cryptid name is left blank' do
-        create(:cryptid, name: 'asdawdt')
+        cryptid = create(:cryptid, name: 'asdawdt')
 
         result = OkCryptidBeSchema.execute(cryptid_by_name_query_blank_name).as_json
-        expect(result).to have_key("errors")
+        expect(result['data']['cryptidByName']).to eq([])
       end
     end
   end

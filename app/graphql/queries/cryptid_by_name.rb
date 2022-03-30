@@ -4,10 +4,10 @@ module Queries
 
     argument :name, String
 
-    type Types::CryptidType, null: false
+    type [Types::CryptidType], null: true
 
     def resolve(args)
-      Cryptid.search(args[:name]).first
+      Cryptid.search_name(args[:name])
     end
   end
 end

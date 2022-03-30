@@ -2,11 +2,19 @@ class Cryptid < ApplicationRecord
   has_many :sightings
   validates :name, :range, :danger_level, :image, :description, presence: true
 
-  def self.search(search_params)
+  def self.search_name(search_params)
     if search_params.blank?
       []
     else
       where("name ILIKE ?", "%#{search_params}%")
+    end
+  end
+
+  def self.search_range(search_params)
+    if search_params.blank?
+      []
+    else
+      where("range ILIKE ?", "%#{search_params}%")
     end
   end
 end
