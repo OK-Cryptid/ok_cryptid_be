@@ -24,7 +24,7 @@ module Queries
       end
 
       it 'returns an error if cryptid name is left blank' do
-        cryptid = create(:cryptid, name: 'asdawdt')
+        create(:cryptid, name: 'asdawdt')
 
         result = OkCryptidBeSchema.execute(cryptid_by_name_query_blank_name).as_json
         expect(result['data']['cryptidByName']).to eq([])

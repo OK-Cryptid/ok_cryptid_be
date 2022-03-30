@@ -12,7 +12,6 @@ RSpec.describe Cryptid, type: :model do
     it { should validate_presence_of(:image) }
     it { should validate_presence_of(:description) }
   end
-
   describe 'search_name method' do
     it 'returns all cryptids that match the key word' do
       cryptid_1 = create(:cryptid, name: 'big')
@@ -20,13 +19,11 @@ RSpec.describe Cryptid, type: :model do
       result = Cryptid.search_name('big')
       expect(result).to eq([cryptid_1, cryptid_2])
     end
-
     it 'returns empty array if no match for keyword' do
       create(:cryptid, name: 'big')
       result = Cryptid.search_name('hello')
       expect(result).to eq([])
     end
-
     it 'returns empty array if keyword is blank' do
       create(:cryptid, name: 'big')
       result = Cryptid.search_name('')
