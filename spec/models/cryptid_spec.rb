@@ -22,13 +22,13 @@ RSpec.describe Cryptid, type: :model do
     end
 
     it 'returns empty array if no match for keyword' do
-      cryptid_1 = create(:cryptid, name: 'big')
+      create(:cryptid, name: 'big')
       result = Cryptid.search_name('hello')
       expect(result).to eq([])
     end
 
     it 'returns empty array if keyword is blank' do
-      cryptid_1 = create(:cryptid, name: 'big')
+      create(:cryptid, name: 'big')
       result = Cryptid.search_name('')
       expect(result).to eq([])
     end
@@ -43,13 +43,13 @@ RSpec.describe Cryptid, type: :model do
     end
 
     it 'returns empty array if no match for keyword' do
-      cryptid_1 = create(:cryptid, range: 'Colorado')
+      create(:cryptid, range: 'Colorado')
       result = Cryptid.search_range('hello')
       expect(result).to eq([])
     end
 
     it 'returns empty array if keyword is blank' do
-      cryptid_1 = create(:cryptid, range: 'Colorado')
+      create(:cryptid, range: 'Colorado')
       result = Cryptid.search_range('')
       expect(result).to eq([])
     end
