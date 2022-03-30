@@ -34,7 +34,7 @@ end
 def cryptid_by_range_query
   <<~GQL
     {
-      cryptidByRange(range: 'Pacific Northwest') {
+      cryptidByRange(range: "Pacific Northwest") {
         name
         description
         dangerLevel
