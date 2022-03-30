@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Cryptid, type: :model do
+RSpec.describe Cryptid do
   describe 'relationships' do
     it { should have_many :sightings }
   end
