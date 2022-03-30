@@ -7,3 +7,4 @@ Style/Documentation:
     - 'Rakefile'
     - '**/*.rake'
     - 'spec/**/*.rb'
+    - 'spec/models/cryptid_spec.rb'
