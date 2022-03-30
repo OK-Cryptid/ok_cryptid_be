@@ -6,4 +6,4 @@ Style/Documentation:
   Exclude:
     - 'Rakefile'
     - '**/*.rake'
-    - 'test/**/*.rb'
+    - 'spec/**/*.rb'
