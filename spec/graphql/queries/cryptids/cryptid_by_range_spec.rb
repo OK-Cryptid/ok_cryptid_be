@@ -8,7 +8,7 @@ module Queries
 
         result = OkCryptidBeSchema.execute(cryptid_by_range_query).as_json
         expect(result['data']['cryptidByRange'].first['name']).to be_a String
-        expect(result['data']['cryptidByRange'].first["description"]).to be_a String
+        expect(result['data']['cryptidByRange'].first['description']).to be_a String
         expect(result['data']['cryptidByRange'].first['dangerLevel']).to be_a String
         expect(result['data']['cryptidByRange'].first['range']).to be_a String
         expect(result['data']['cryptidByRange'].first['image']).to be_a String
@@ -34,7 +34,7 @@ end
 def cryptid_by_range_query
   <<~GQL
     {
-      cryptidByRange(range: "Pacific Northwest") {
+      cryptidByRange(range: 'Pacific Northwest') {
         name
         description
         dangerLevel
