@@ -1,3 +1,4 @@
+# query to get cryptid by id
 module Queries
   class CryptidById < Queries::BaseQuery
     description 'Find a cryptid by id'

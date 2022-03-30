@@ -1,6 +1,7 @@
+# query to get all cryptids
 module Queries
   class GetCryptids < Queries::BaseQuery
-    description "All cryptids"
+    description 'All cryptids'
 
     type [Types::CryptidType], null: false
 
