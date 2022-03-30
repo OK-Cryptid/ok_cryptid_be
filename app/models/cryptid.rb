@@ -14,7 +14,7 @@ class Cryptid < ApplicationRecord
     if search_params.blank?
       []
     else
-      where("range ILIKE ?", "%#{search_params}%")
+      where('range ILIKE ?', "%#{search_params}%")
     end
   end
 end
