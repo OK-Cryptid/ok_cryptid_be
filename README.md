@@ -118,8 +118,7 @@ Implicit
 
 ## Database Schema
 
-https://app.dbdesigner.net/designer/schema/511675
-
+![Screen Shot 2022-04-01 at 3 50 49 PM](https://user-images.githubusercontent.com/69017022/161346057-d06ed82c-0459-4b84-ae1a-30bf974e48e4.png)
 
 ----------
 
