@@ -1,6 +1,6 @@
 module Queries
   class Sightings < Queries::BaseQuery
-    description "All sightings"
+    description 'All sightings'
 
     type [Types::SightingType], null: false
 
@@ -8,4 +8,4 @@ module Queries
       ::Sighting.all
     end
   end
-end 
+end
