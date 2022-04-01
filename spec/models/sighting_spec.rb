@@ -19,7 +19,8 @@ RSpec.describe Sighting, type: :model do
         sighting3 = create(:sighting, location: 'Nowhere')
 
         expect(Sighting.location_search('denver')).to eq([sighting1, sighting2])
+        expect(Sighting.location_search('denver')).to_not eq([sighting3])
       end
     end
-  end         
+  end
 end

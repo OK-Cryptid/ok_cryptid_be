@@ -10,4 +10,4 @@ module Queries
       Sighting.find(args[:id])
     end
   end
-end 
+end

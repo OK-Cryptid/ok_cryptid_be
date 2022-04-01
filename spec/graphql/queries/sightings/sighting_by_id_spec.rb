@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Types::QueryType do
   describe 'display sighting searched by Id' do
     it 'can query a single sighting by id' do
-      sighting = create(:sighting, id: '1')
+      create(:sighting, id: '1')
 
       result = OkCryptidBeSchema.execute(sighting_by_id_query).as_json
 
