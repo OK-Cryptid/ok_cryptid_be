@@ -10,4 +10,16 @@ RSpec.describe Sighting, type: :model do
     it { should validate_presence_of(:title) }
     it { should validate_presence_of(:location) }
   end
+
+  describe 'class methods' do
+    describe 'location_search' do
+      it 'returns array of sightings by location' do
+        sighting1 = create(:sighting, location: 'Denver, CO')
+        sighting2 = create(:sighting, location: 'Denver, DE')
+        sighting3 = create(:sighting, location: 'Nowhere')
+
+        expect(Sighting.location_search('denver')).to eq([sighting1, sighting2])
+      end
+    end
+  end         
 end
