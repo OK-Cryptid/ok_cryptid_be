@@ -30,7 +30,6 @@ module Queries
   end
 end
 
-
 def sighting_by_location_query
   <<~GQL
     {
@@ -60,6 +59,7 @@ def not_found_query
     }
   GQL
 end
+
 def blank_query
   <<~GQL
     {

@@ -6,8 +6,7 @@ class Sighting < ApplicationRecord
     if search_term.blank?
       []
     else
-      where("location ILIKE ?", "%#{search_term}%")
+      where('location ILIKE ?', "%#{search_term}%")
     end
   end
-
 end
