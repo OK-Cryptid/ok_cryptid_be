@@ -21,9 +21,9 @@ namespace :csv_load do
       trails = row.to_hash['trail_links'].split
       trails.first.gsub!('["', '')
       trails.last.gsub!(']', '')
-      trails.last.sub!('"', '')
-      trails.last.sub!('"', '')
+
       trails.map { |t| t.sub!('",', '') }
+      trails.map { |t| t.delete!('\"') }
 
       sighting.update!(trail_links: trails)
     end
