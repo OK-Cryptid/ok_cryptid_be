@@ -17,7 +17,15 @@ namespace :csv_load do
   task sightings: :environment do
     Sighting.destroy_all
     CSV.foreach('./db/data/sighting_data.csv', headers: true) do |row|
-      Sighting.create!(row.to_hash)
+      sighting = Sighting.create!(row.to_hash)
+      trails = row.to_hash['trail_links'].split
+      trails.first.gsub!('["', '')
+      trails.last.gsub!(']', '')
+      trails.last.sub!('"', '')
+      trails.last.sub!('"', '')
+      trails.map { |t| t.sub!('",', '') }
+
+      sighting.update!(trail_links: trails)
     end
     puts 'Sightings Imported'
   end
