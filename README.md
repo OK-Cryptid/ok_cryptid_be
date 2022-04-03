@@ -60,6 +60,10 @@ On your local system, open a terminal session to run the following commands:
 ### Use of this Repository
 In order to run this application you need both this Backend Repository and the associated [Frontend Repository](https://github.com/OK-Cryptid/ok-cryptid-fe)
 
+**Backend Server**
+
+To explore the Backend queries navigate to https://cryptic-garden-95478.herokuapp.com/graphiql and check it out!
+
 **Frontend Server**
  
 For a full explanation to set-up the frontend server, please see the docs [Here](https://github.com/OK-Cryptid/ok-cryptid-fe#readme)
