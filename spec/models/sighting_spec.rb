@@ -21,6 +21,18 @@ RSpec.describe Sighting, type: :model do
         expect(Sighting.location_search('denver')).to eq([sighting1, sighting2])
         expect(Sighting.location_search('denver')).to_not eq([sighting3])
       end
+
+      it 'returns empty array if no match for keyword' do
+        create(:sighting, location: 'Denver, CO')
+        result = Sighting.location_search('hello')
+        expect(result).to eq([])
+      end
+
+      it 'returns empty array if keyword is blank' do
+        create(:sighting, location: 'Denver, CO')
+        result = Sighting.location_search('')
+        expect(result).to eq([])
+      end
     end
   end
 end
