@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'GraphQL', type: :request do
   it 'test graphql to post all sightings' do
-    create(:cryptid, name: 'Big Foot')
+    big_foot = create(:cryptid, name: 'Big Foot')
     create(:sighting, cryptid: big_foot)
     create_list(:sighting, 4)
 
@@ -30,7 +30,7 @@ RSpec.describe 'GraphQL', type: :request do
   end
 
   it 'test graphql to post signle sighting by ID' do
-    create(:cryptid, name: 'Big Foot', id: 7)
+    big_foot = create(:cryptid, name: 'Big Foot', id: 7)
     create(:sighting, cryptid: big_foot, id: 1)
 
     body = '{
@@ -56,7 +56,7 @@ RSpec.describe 'GraphQL', type: :request do
   end
 
   it 'test graphql to post sightings by location' do
-    create(:cryptid, name: 'Big Foot')
+    big_foot = create(:cryptid, name: 'Big Foot')
     create(:sighting, cryptid: big_foot, location: 'Denver')
     create(:sighting, cryptid: big_foot, location: 'Denver')
     create(:sighting, cryptid: big_foot, location: 'Cali')
