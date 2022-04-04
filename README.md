@@ -1,6 +1,7 @@
+![with-bg](https://user-images.githubusercontent.com/69017022/161345695-e2ec9ddb-34a0-493a-9232-80b70a8b3dab.png)
 
 
-# Mod4 OK,Cryptid Project
+# OK, Cryptid
 #####  (this repo is used with the [OK, Cryptid](https://github.com/OK-Cryptid/ok_cryptid_be))
 
 <details open="open">
@@ -58,6 +59,10 @@ On your local system, open a terminal session to run the following commands:
 
 ### Use of this Repository
 In order to run this application you need both this Backend Repository and the associated [Frontend Repository](https://github.com/OK-Cryptid/ok-cryptid-fe)
+
+**Backend Server**
+
+To explore the Backend queries navigate to https://cryptic-garden-95478.herokuapp.com/graphiql and check it out!
 
 **Frontend Server**
  
@@ -117,8 +122,7 @@ Implicit
 
 ## Database Schema
 
-https://app.dbdesigner.net/designer/schema/511675
-
+![Screen Shot 2022-04-01 at 3 50 49 PM](https://user-images.githubusercontent.com/69017022/161346057-d06ed82c-0459-4b84-ae1a-30bf974e48e4.png)
 
 ----------
 
