@@ -8,7 +8,9 @@ RSpec.describe 'GraphQL', type: :request do
 
     body = '{
       sightings {
-        cryptidId
+        cryptid {
+        name
+        }
         description
         image
         location
