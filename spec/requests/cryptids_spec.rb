@@ -74,10 +74,10 @@ RSpec.describe 'getCryptids request' do
         }'
     post '/graphql', params: { query: body }
     range = JSON.parse(response.body)
-    expect(range['data']['cryptidByName'].first['name']).to be_a(String)
-    expect(range['data']['cryptidByName'].first['description']).to be_a(String)
-    expect(range['data']['cryptidByName'].first['dangerLevel']).to be_a(String)
-    expect(range['data']['cryptidByName'].first['range']).to be_a(String)
-    expect(range['data']['cryptidByName'].first['image']).to be_a(String)
+    expect(range['data']['cryptidByRange'].first['name']).to be_a(String)
+    expect(range['data']['cryptidByRange'].first['description']).to be_a(String)
+    expect(range['data']['cryptidByRange'].first['dangerLevel']).to be_a(String)
+    expect(range['data']['cryptidByRange'].first['range']).to be_a(String)
+    expect(range['data']['cryptidByRange'].first['image']).to be_a(String)
   end
 end
