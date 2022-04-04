@@ -57,9 +57,9 @@ RSpec.describe 'GraphQL', type: :request do
 
   it 'test graphql to post sightings by location' do
     create(:cryptid, name: 'Big Foot')
-    big_sighting1 = create(:sighting, cryptid: big_foot, location: 'Denver')
-    big_sighting2 = create(:sighting, cryptid: big_foot, location: 'Denver')
-    big_sighting3 = create(:sighting, cryptid: big_foot, location: 'Cali')
+    create(:sighting, cryptid: big_foot, location: 'Denver')
+    create(:sighting, cryptid: big_foot, location: 'Denver')
+    create(:sighting, cryptid: big_foot, location: 'Cali')
 
     body = '{ sightingByLocation(location: "denver") {
         cryptidId
