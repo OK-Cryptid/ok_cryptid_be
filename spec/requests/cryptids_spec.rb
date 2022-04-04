@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "getCryptids request" do
+RSpec.describe 'getCryptids request' do
   it 'returns all cryptids' do
     create_list(:cryptid, 4)
     body = '{
@@ -12,7 +12,7 @@ RSpec.describe "getCryptids request" do
          image
          }
         }'
-    post '/graphql', params: {query: body}
+    post '/graphql', params: { query: body }
     cryptids = JSON.parse(response.body)
     expect(cryptids['data']['getCryptids'].first['name']).to be_a(String)
     expect(cryptids['data']['getCryptids'].first['description']).to be_a(String)
@@ -32,7 +32,7 @@ RSpec.describe "getCryptids request" do
          image
          }
         }'
-    post '/graphql', params: {query: body}
+    post '/graphql', params: { query: body }
     cryptid = JSON.parse(response.body)
     expect(cryptid['data']['cryptidById']['name']).to be_a(String)
     expect(cryptid['data']['cryptidById']['description']).to be_a(String)
@@ -52,7 +52,7 @@ RSpec.describe "getCryptids request" do
          image
          }
         }'
-    post '/graphql', params: {query: body}
+    post '/graphql', params: { query: body }
     cryptid_name = JSON.parse(response.body)
     expect(cryptid_name['data']['cryptidByName'].first['name']).to be_a(String)
     expect(cryptid_name['data']['cryptidByName'].first['description']).to be_a(String)
@@ -72,7 +72,7 @@ RSpec.describe "getCryptids request" do
          image
          }
         }'
-    post '/graphql', params: {query: body}
+    post '/graphql', params: { query: body }
     range = JSON.parse(response.body)
     expect(range['data']['cryptidByName'].first['name']).to be_a(String)
     expect(range['data']['cryptidByName'].first['description']).to be_a(String)
