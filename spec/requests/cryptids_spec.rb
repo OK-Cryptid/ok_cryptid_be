@@ -62,9 +62,9 @@ RSpec.describe 'getCryptids request' do
   end
 
   it 'returns a cryptid by range' do
-    create(:cryptid, name: 'colorado')
+    create(:cryptid, range: 'colorado')
     body = '{
-      cryptidByName(name: "colorado") {
+      cryptidByRange(range: "colorado") {
          name
          description
          dangerLevel
