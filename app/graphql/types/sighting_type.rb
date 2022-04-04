@@ -3,7 +3,7 @@
 module Types
   class SightingType < Types::BaseObject
     field :id, ID, null: false
-    field :cryptid_id, Integer
+    field :cryptid, Types::CryptidType
     field :location, String
     field :description, String
     field :image, String

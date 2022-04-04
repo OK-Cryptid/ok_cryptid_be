@@ -6,6 +6,8 @@ RSpec.describe Types::QueryType do
       create(:sighting, id: '1')
 
       result = OkCryptidBeSchema.execute(sighting_by_id_query).as_json
+      require 'pry'
+      binding.pry
 
       expect(result['data']['sightingById']['title']).to be_a(String)
       expect(result['data']['sightingById']['description']).to be_a(String)
@@ -21,7 +23,7 @@ def sighting_by_id_query
   <<~GQL
     {
       sightingById(id: "1") {
-        cryptidId
+        cryptid
         title
         description
         location

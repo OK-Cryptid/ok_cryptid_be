@@ -7,7 +7,7 @@ module Queries
     type [Types::SightingType], null: true
 
     def resolve(args)
-      Sighting.location_search(args[:location])
+      Sighting.eager_load(:cryptid).location_search(args[:location])
     end
   end
 end
