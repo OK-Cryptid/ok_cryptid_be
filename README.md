@@ -116,8 +116,8 @@ Implicit
 ### Important Gems
 
 - Testing: [rspec-rails](https://github.com/rspec/rspec-rails), [simplecov](https://github.com/simplecov-ruby/simplecov), [factory_bot_rails](https://github.com/thoughtbot/factory_bot_rails), [faker](https://github.com/vajradog/faker-rails)
-- GraphQL: graphql and graphiql-rails (no specific sites, independent research needed) 
-
+- GraphQL: [graphql](https://github.com/rmosolgo/graphql-ruby) and [graphiql-rails](https://github.com/rmosolgo/graphiql-rails) 
+- CORS: [rack-cors](https://github.com/cyu/rack-cors)
 ----------
 
 ## Database Schema
