@@ -23,7 +23,7 @@ RSpec.describe 'GraphQL', type: :request do
     sightings = JSON.parse(response.body, symbolize_names: true)
 
     expect(sightings[:data][:sightings].count).to eq(5)
-    expect(sightings[:data][:sightings].first[:cryptidId]).to be_a(Integer)
+    expect(sightings[:data][:sightings].first[:cryptid]).to be_a(Hash)
     expect(sightings[:data][:sightings].first[:title]).to be_a(String)
     expect(sightings[:data][:sightings].first[:description]).to be_a(String)
     expect(sightings[:data][:sightings].first[:location]).to be_a(String)
@@ -37,7 +37,10 @@ RSpec.describe 'GraphQL', type: :request do
 
     body = '{
       sightingById(id: 1) {
-        cryptidId
+        cryptid {
+        name
+        dangerLevel
+        }
         description
         image
         location
@@ -49,7 +52,11 @@ RSpec.describe 'GraphQL', type: :request do
     post '/graphql', params: { query: body }
     sightings = JSON.parse(response.body, symbolize_names: true)
 
-    expect(sightings[:data][:sightingById][:cryptidId]).to be_a(Integer)
+    expect(sightings[:data][:sightingById][:cryptid]).to be_a(Hash)
+    expect(sightings[:data][:sightingById][:cryptid]).to have_key(:name)
+    expect(sightings[:data][:sightingById][:cryptid]).to have_key(:dangerLevel)
+    expect(sightings[:data][:sightingById][:cryptid][:dangerLevel]).to be_a(String)
+    expect(sightings[:data][:sightingById][:cryptid][:name]).to be_a(String)
     expect(sightings[:data][:sightingById][:title]).to be_a(String)
     expect(sightings[:data][:sightingById][:description]).to be_a(String)
     expect(sightings[:data][:sightingById][:location]).to be_a(String)
@@ -64,7 +71,9 @@ RSpec.describe 'GraphQL', type: :request do
     create(:sighting, cryptid: big_foot, location: 'Cali')
 
     body = '{ sightingByLocation(location: "denver") {
-        cryptidId
+        cryptid {
+        name
+        }
         description
         image
         location
@@ -77,7 +86,8 @@ RSpec.describe 'GraphQL', type: :request do
     sightings = JSON.parse(response.body, symbolize_names: true)
 
     expect(sightings[:data][:sightingByLocation].count).to eq(2)
-    expect(sightings[:data][:sightingByLocation].first[:cryptidId]).to be_a(Integer)
+    expect(sightings[:data][:sightingByLocation].first[:cryptid]).to be_a(Hash)
+    expect(sightings[:data][:sightingByLocation].first[:cryptid][:name]).to be_a(String)
     expect(sightings[:data][:sightingByLocation].first[:title]).to be_a(String)
     expect(sightings[:data][:sightingByLocation].first[:description]).to be_a(String)
     expect(sightings[:data][:sightingByLocation].first[:location]).to be_a(String)

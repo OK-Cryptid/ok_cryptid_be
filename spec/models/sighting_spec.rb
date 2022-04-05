@@ -31,7 +31,8 @@ RSpec.describe Sighting, type: :model do
       it 'returns empty array if keyword is blank' do
         create(:sighting, location: 'Denver, CO')
         result = Sighting.location_search('')
-        expect(result).to eq([])
+        expect(result.count).to eq(1)
+        expect(result[0].location).to eq('Denver, CO')
       end
     end
   end
