@@ -9,7 +9,7 @@ RSpec.describe Types::QueryType do
 
       result = OkCryptidBeSchema.execute(sighting_query).as_json
       expect(result['data']['sightings'].count).to eq(2)
-      expect(result['data']['sightings'].first['cryptidId']).to eq(big_foot.id)
+      expect(result['data']['sightings'].first['cryptid']).to be_a(Hash)
       expect(result['data']['sightings'].first['title']).to be_a(String)
       expect(result['data']['sightings'].first['description']).to be_a(String)
       expect(result['data']['sightings'].first['location']).to be_a(String)
@@ -23,7 +23,13 @@ def sighting_query
   <<~GQL
     {
       sightings {
-        cryptidId
+        cryptid {
+        name
+        range
+        dangerLevel
+        image
+        id
+        }
         title
         description
         location
