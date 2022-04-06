@@ -970,6 +970,7 @@ response
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <table>
+  Back-end
   <tr>
     <!-- Darren -->
     <td align="center"><a href="https://github.com/dkulback"><img src="https://avatars.githubusercontent.com/u/83717116?v=4" width="100px;" alt=""/><br /><sub><b>Darren (he/him)</b></sub></a><br /><a href="https://www.linkedin.com/in/darren-kulback-9b2394189/" title="Code"> LinkedIn </a></td>
@@ -981,7 +982,19 @@ response
      <td align="center"><a href="https://github.com/ParkerLockhart"><img src="https://avatars.githubusercontent.com/u/88950699?v=4" width="100px;" alt=""/><br /><sub><b>Parker (they/them)</b></sub></a><br /><a href="https://www.linkedin.com/in/parker-lockhart/" title="Code"> LinkedIn </a></td>
   </tr>
 </table>
-
+<table>
+  Front-end
+  <tr>
+    <!-- Kayla -->
+    <td align="center"><a href="https://github.com/krdurrett"><img src="https://avatars.githubusercontent.com/u/88299275?v=4" width="100px;" alt=""/><br /><sub><b>Kayla (she/her)</b></sub></a><br /><a href="https://www.linkedin.com/in/kayla-durrett/" title="Code"> LinkedIn </a></td>
+    <!-- Jasmyn -->
+    <td align="center"><a href="https://github.com/jasmyn2244"><img src="https://avatars.githubusercontent.com/u/78129211?v=4" width="100px;" alt=""/><br /><sub><b>Jasmyn (she/her)</b></sub></a><br /><a href="https://www.linkedin.com/in/jasmyn-hicks/" title="Code">  LinkedIn  </a></td>
+    <!-- Richard -->
+    <td align="center"><a href="https://github.com/RosaTheDev"><img src="https://avatars.githubusercontent.com/u/29051996?v=4" width="100px;" alt=""/><br /><sub><b>Richard (he/him)</b></sub></a><br /><a href="https://www.linkedin.com/in/rosathedev/" title="Code"> LinkedIn </a></td>
+    <!-- Grace -->
+     <td align="center"><a href="https://github.com/GraceGardner"><img src="https://avatars.githubusercontent.com/u/42048868?v=4" width="100px;" alt=""/><br /><sub><b>Grace (she/her)</b></sub></a><br /><a href="https://www.linkedin.com/in/grace-iris-gardner/" title="Code"> LinkedIn </a></td>
+  </tr>
+</table>
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
 
