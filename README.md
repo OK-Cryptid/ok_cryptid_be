@@ -3,8 +3,7 @@
 [![OK-Cryptid](https://circleci.com/gh/OK-Cryptid/ok_cryptid_be.svg?style=svg)](https://app.circleci.com/pipelines/github/OK-Cryptid)
 # OK, Cryptid
 #####  (this repo is used with the [OK, Cryptid](https://github.com/OK-Cryptid/ok_cryptid_be))
-
-<details open="open">
+![home_page_view](https://media.giphy.com/media/cGWu8KDqImrixKz0GV/giphy-downsized.gif)<details open="open">
   <summary>Table of Contents</summary>
   <ol>
     <li>
